@@ -46,19 +46,19 @@ For each record in the dataset it is provided:
 
 After setting the source directory for the files to current working directory, read into tables the data located into following data tables  
 
-No. Data Table Variable   Description  
---- --------------------- ---------------------------------------------
-1   Features              Stores the features data read from features.txt table. 
-2   Activity_Type         Stores the activity data read from activity_labels.txt table. 
-3   Subject_Train         Stores the training subject data read from subject_train.txt table.          
-4   Train_Data            Stores the training data read from x_train.txt table.
-5   Train_Label           Stores the training lable data read from y_train.txt table.
-6   Training_Data         Stores the data after combining columns from Train_Label, Subject_Train and Train_Data data tables.
-7   Subject_Test          Stores the training subject data read from subject_test.txt table.
-8   Test_Data             Stores the training data read from x_test.txt table.
-9   Test_Label            Stores the training lable data read from y_test.txt table.
-10  Test_Data             Stores the data after combining columns from Test_Label, Subject_Test and Test_Data data tables.
-11  Final_Data            Stores the data after merging Training_Data and Test_Data using rbind.  
+Data Table Variable   Description  
+--------------------- ---------------------------------------------
+Features              Stores the features data read from features.txt table. 
+Activity_Type         Stores the activity data read from activity_labels.txt table. 
+Subject_Train         Stores the training subject data read from subject_train.txt table.          
+Train_Data            Stores the training data read from x_train.txt table.
+Train_Label           Stores the training lable data read from y_train.txt table.
+Training_Data         Stores the data after combining columns from Train_Label, Subject_Train and Train_Data data tables.
+Subject_Test          Stores the training subject data read from subject_test.txt table.
+Test_Data             Stores the training data read from x_test.txt table.
+Test_Label            Stores the training lable data read from y_test.txt table.
+Test_Data             Stores the data after combining columns from Test_Label, Subject_Test and Test_Data data tables.
+Final_Data            Stores the data after merging Training_Data and Test_Data using rbind.  
 
 Assign valid column names to each data set using colnames() function.
 
@@ -66,11 +66,11 @@ Assign valid column names to each data set using colnames() function.
 #### Section 2. Extract only the measurements on the mean and standard deviation for each measurement.
 
 
---- ------------------- ---------------------------------------------
-No. Data Table Variable Description  
---- ------------------- ---------------------------------------------
-1   mean_std            Using grep command perform a pattern search on Final_Data data table to identify the following columns                           like (subjectId, activityId, mean and std) and assign it to variable mean_std
---- ------------------- ---------------------------------------------
+------------------- ---------------------------------------------
+Data Table Variable Description  
+------------------- ---------------------------------------------
+mean_std            Using grep command perform a pattern search on Final_Data data table to identify the following columns                          like (subjectId, activityId, mean and std) and assign it to variable mean_std
+------------------- ---------------------------------------------
 
 #### Section 3. Use descriptive activity names to name the activities in the data set
 
@@ -79,21 +79,21 @@ Merge the mean_std data set with the Activity_Type table to inlude the descripti
 
 #### Section 4. Appropriately label the data set with descriptive activity names.
 
-No. Data Table Variable   Description  
---- --------------------- ---------------------------------------------
-1   pattern               Character Vector that was created to supply grep te pattern to look for.  
-2   replacement           Character Vector that was created to supply the replacement value for the matched pattern in grep.  
-3   mean_std_Names        Stores the colnames of the mean_std data table.            
+Data Table Variable   Description  
+--------------------- ---------------------------------------------
+pattern               Character Vector that was created to supply grep te pattern to look for.  
+replacement           Character Vector that was created to supply the replacement value for the matched pattern in grep.  
+mean_std_Names        Stores the colnames of the mean_std data table.            
 
 grep function was used for pattern replacement to clean up the data labels.
 
 
 #### Section 5. Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
---- --------------------- ---------------------------------------------
-No. Data Table Variable   Description  
---- --------------------- ---------------------------------------------
-1   Tidy_Data             Tidy Data (Tidy_Data) is created by applying the mean function using chaining, group_by and                                      summarize_each operation to mean_std data table from dplyr library  
---- --------------------- ---------------------------------------------
+--------------------- ---------------------------------------------
+Data Table Variable   Description  
+--------------------- ---------------------------------------------
+Tidy_Data             Tidy Data (Tidy_Data) is created by applying the mean function using chaining, group_by and                                      summarize_each operation to mean_std data table from dplyr library  
+--------------------- ---------------------------------------------
 
 The Tidy_Data is then written to a text file **_(tidy_Data.txt)_** using write.table() function.    

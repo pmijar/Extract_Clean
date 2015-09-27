@@ -35,7 +35,7 @@ Please follow the below steps to execute the run_analysis.R script:
 
 ## Output of the run_analysis.R script
 
-The ouput of the run_analysis.R script would generate the required tidy data set as **_tidy_Data.txt_** file under data folder in the current working directory.
+The output of the run_analysis.R script would generate the required tidy data set as **_tidy_Data.txt_** file under data folder in the current working directory.
 
 
 ## Additional Information

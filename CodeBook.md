@@ -46,17 +46,17 @@ For each record in the dataset it is provided:
 
 After setting the source directory for the files to current working directory, read into tables the data located into following data tables  
 
--Features       :       Stores the features data read from features.txt table. 
--Activity_Type  :       Stores the activity data read from activity_labels.txt table. 
--Subject_Train  :       Stores the training subject data read from subject_train.txt table.          
--Train_Data     :       Stores the training data read from x_train.txt table.
--Train_Label    :       Stores the training lable data read from y_train.txt table.
--Training_Data  :       Stores the data after combining columns from Train_Label, Subject_Train and Train_Data data tables.
--Subject_Test   :       Stores the training subject data read from subject_test.txt table.
--Test_Data      :       Stores the training data read from x_test.txt table.
--Test_Label     :       Stores the training lable data read from y_test.txt table.
--Test_Data      :       Stores the data after combining columns from Test_Label, Subject_Test and Test_Data data tables.
--Final_Data     :       Stores the data after merging Training_Data and Test_Data using rbind.  
+-Features       :       Stores the features data read from features.txt table.   <br/>
+-Activity_Type  :       Stores the activity data read from activity_labels.txt table.  <br/> 
+-Subject_Train  :       Stores the training subject data read from subject_train.txt table.   <br/>         
+-Train_Data     :       Stores the training data read from x_train.txt table.  <br/>
+-Train_Label    :       Stores the training lable data read from y_train.txt table.   <br/>
+-Training_Data  :       Stores the data after combining columns from Train_Label, Subject_Train and Train_Data data tables.   <br/>
+-Subject_Test   :       Stores the training subject data read from subject_test.txt table.   <br/>
+-Test_Data      :       Stores the training data read from x_test.txt table.   <br/>
+-Test_Label     :       Stores the training lable data read from y_test.txt table.   <br/>
+-Test_Data      :       Stores the data after combining columns from Test_Label, Subject_Test and Test_Data data tables.   <br/>
+-Final_Data     :       Stores the data after merging Training_Data and Test_Data using rbind.    <br/>
 
 Assign valid column names to each data set using colnames() function.
 

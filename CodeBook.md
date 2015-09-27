@@ -77,7 +77,7 @@ Merge the mean_std data set with the Activity_Type table to inlude the descripti
 -**replacement:-**       Character Vector that was created to supply the replacement value for the matched pattern in grep.  <br/>
 -**mean_std_Names:-**    Stores the colnames of the mean_std data table. <br/>         
 
-grep function was used for pattern replacement to clean up the data labels.
+gsub function was used for pattern replacement to clean up the data labels.
 
 
 #### Section 5. Create a second, independent tidy data set with the average of each variable for each activity and each subject.

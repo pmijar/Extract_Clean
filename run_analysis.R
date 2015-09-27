@@ -91,4 +91,4 @@ if(!file.exists("./data")) # Create a data directory if not present in working d
 {
   dir.create("./data")
 } 
-write.table(Tidy_Data, file = "./data/tidy_Data.txt",sep = "\t", append = FALSE)
+write.table(Tidy_Data, file = "./data/tidy_Data.txt",sep = "\t", append = FALSE, row.names = FALSE)
